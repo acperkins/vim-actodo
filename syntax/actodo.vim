@@ -10,6 +10,7 @@ syntax match prTodo /^\s*TODO:/
 syntax match prWork /^\s*WORK:/
 syntax match prDone /^\s*DONE:/
 syntax region prUrl start="<.*:\/\/" end=">"
+syntax match prTicket /#\d\+#/
 
 " ISO date.
 syntax match prDate /\<\d\{4}-\d\{2}-\d\{2}\>/
@@ -28,5 +29,6 @@ highlight prWork term=bold cterm=bold gui=bold ctermfg=2 guifg=#00ff00
 highlight prDone term=bold cterm=bold gui=bold ctermfg=7 guifg=#808080
 highlight prDate term=bold cterm=bold gui=bold ctermfg=4 guifg=#0000ff
 highlight prUrl ctermfg=4 guifg=#0000ff
+highlight prTicket term=bold cterm=bold gui=bold ctermfg=6 guifg=#008080
 
 let b:current_syntax = 'actodo'
